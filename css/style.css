@@ -1,0 +1,294 @@
+button {
+  box-shadow: none !important;
+  border: none !important;
+}
+select,
+input,
+textarea {
+  box-shadow: none !important;
+}
+/* Dropdown */
+
+/* .dropdown-toggle::after {
+  display: none;
+} */
+.navbar .nav-item {
+  color: black !important;
+}
+.dropdown-menu {
+  padding: 0;
+}
+
+.dropdown-menu li {
+  cursor: default;
+}
+@media (max-width: 576px) {
+  .dropdown-menu .dropdown-item {
+    text-wrap: wrap;
+  }
+}
+.dropdown-menu .dropdown-item:hover {
+  background-color: #0c2647 !important;
+  color: #fff;
+  transition: 0.6s ease all;
+}
+@media (min-width: 992px) {
+  .dropdown-menu {
+    opacity: 0 !important;
+    display: block;
+    transition: 1s all;
+    pointer-events: none;
+  }
+  .dropdown:hover .dropdown-menu {
+    opacity: 1 !important;
+    pointer-events: initial;
+  }
+}
+.dropdown-menu {
+  position: relative;
+}
+.dropdown-menu::before {
+  content: '';
+  display: block;
+  width: 0;
+  border-width: 0px 15px 15px;
+  border-style: solid;
+  border-color: #0c2647 transparent;
+  position: absolute;
+  top: -15px;
+}
+@media (max-width: 992px) {
+  .dropdown-menu::before {
+    top: 28px;
+  }
+}
+/* Dropdown */
+* {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+body {
+  /* background-color: #f5f5f5 !important; */
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
+  overflow-x: hidden;
+}
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+.bg-light {
+  background-color: #f2f2f2 !important;
+}
+.text-primary {
+  color: #cfa244 !important;
+}
+.bg-primary {
+  background-color: #cfa244 !important;
+}
+.bg-secondary {
+  background-color: #0c2647 !important;
+}
+.text-secondary {
+  color: #0c2647 !important;
+}
+/* Custom Framework */
+.pointer {
+  cursor: pointer;
+}
+.border-primary {
+  border-color: #cfa244 !important;
+}
+/* Custom Framework */
+
+/* Navbar */
+.dropdown-menu.show {
+  left: 8px; /* arabic edit */
+}
+.hr {
+  background-color: #b7b5b5;
+}
+/* Navbar */
+
+/* Hero Section */
+.hero-section {
+  background-image: url('../images/main-wajen-sa.webp');
+  background-size: 100% 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 79vh;
+  position: relative;
+}
+.hero-section .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.49);
+}
+/* Hero Section */
+/* about */
+.about .line1 {
+  border-top: 3px solid #cfa244;
+  width: 80px;
+  height: 2px;
+}
+.about .line2 {
+  border-top: 3px solid #b1b2b2;
+  width: 60px;
+  height: 2px;
+}
+.about .line3 {
+  border-top: 3px solid #b1b2b2;
+  width: 30px;
+  height: 2px;
+}
+@media (min-width: 767px) {
+  .about .about-paragraph {
+    line-height: 2em !important;
+  }
+}
+.about .offers {
+  background-color: #f7f7f7;
+}
+.about .offers img {
+  height: 62px;
+}
+.about .offers p {
+  line-height: 29px;
+}
+/* about */
+
+/* services */
+.services .paragraph {
+  max-width: 722px;
+}
+.services .images {
+  height: 450px;
+}
+.services .tab-content {
+  max-height: 0;
+  clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+  overflow: hidden;
+  transition: all 0.7s linear;
+}
+
+.services .active {
+  max-height: 450px;
+  padding: 1.5rem;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+.services .tab-btns .tab {
+  color: #cfa244;
+}
+/* @media (max-width: 576px) {
+  .services .tab-btns .tab h5 {
+    font-size: 15px;
+  }
+  .services .tab-btns .tab p {
+    font-size: 12px;
+  }
+} */
+.services .tab-btns .tab .tab-image {
+  border: 1px solid #cfa244;
+}
+.services .tab-btns .tab.active-btn {
+  color: #0c2647;
+}
+.services .tab-btns .tab.active-btn .tab-image {
+  border: 1px solid #0c2647;
+  background-color: #0c2647;
+}
+/* services */
+
+/* Contact */
+.contact .contact-form {
+  position: relative;
+}
+.contact .contact-form:after {
+  /* Need Change in Arabic */
+  content: '';
+  background-color: #cfa244;
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  top: 0px;
+  right: 110%;
+  display: block;
+}
+@media (max-width: 767px) {
+  .contact .contact-form {
+    position: static;
+  }
+  .contact .contact-form:after {
+    display: none;
+  }
+}
+.contact .contact-sec .info {
+  width: 300px;
+}
+@media (min-width: 767px) and (max-width: 992px) {
+  .contact .contact-sec .info {
+    width: 250px;
+  }
+}
+/* .contact .contact-sec .info {
+  position: relative;
+}
+.contact .contact-sec .info:after {
+  content: '';
+  background-color: #cfa244;
+  position: absolute;
+  width: 50px;
+  height: 2px;
+  top: 0px;
+  left: 110%;
+  display: block;
+} */
+/* Contact */
+
+/* all */
+@media (max-width: 576px) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 15px !important;
+  }
+  p,
+  span {
+    font-size: 13px !important;
+  }
+  .navbar-toggler-icon {
+    font-size: 20px !important;
+  }
+}
+
+/* ScrollTop */
+.scrollTop {
+  position: fixed;
+  bottom: 800px;
+  left: 4px;
+  width: 60px;
+  height: 60px;
+  background: url('../images/up-arrow.png');
+  border-radius: 50%;
+  background-size: 40px;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  z-index: 9999;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.7s;
+}
+.scrollTop.active {
+  bottom: 7px;
+  visibility: visible;
+  opacity: 1;
+}

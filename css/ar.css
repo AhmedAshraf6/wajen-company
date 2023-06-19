@@ -1,0 +1,14 @@
+/* Navbar */
+.dropdown-menu.show {
+  left: auto;
+  right: 8px;
+}
+/* Navbar */
+
+/* Contact */
+.contact .contact-form:after {
+  top: 0px;
+  right: auto;
+  left: 110%;
+}
+/* Contact */
