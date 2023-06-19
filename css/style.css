@@ -101,9 +101,7 @@ body {
 /* Custom Framework */
 
 /* Navbar */
-.navbar {
-  overflow: hidden;
-}
+
 .navbar .nav-link {
   color: black !important;
   font-weight: 600;
