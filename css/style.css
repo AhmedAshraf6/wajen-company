@@ -186,6 +186,11 @@ body {
 .services .images {
   height: 450px;
 }
+.services .tab-btns {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
 .services .tab-content {
   max-height: 0;
   clip-path: polygon(0 0, 0 0, 0 0, 0 0);
