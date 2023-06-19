@@ -121,6 +121,11 @@ html {
   min-height: 79vh;
   position: relative;
 }
+@media (max-width: 576px) {
+  .hero-section {
+    background-attachment: scroll !important;
+  }
+}
 .hero-section .overlay {
   position: absolute;
   top: 0;
