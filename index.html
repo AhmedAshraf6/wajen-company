@@ -582,7 +582,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-6" id="ss">
               <!-- arabic edit -->
               <div id="contact-form" class="contact-form py-3"></div>
             </div>
@@ -627,35 +627,26 @@
     <script src="js/bootstrap.bundle.min.js"></script>
 
     <!-- Custom Js -->
-    <script src="js/main.js"></script>
 
     <!-- Animation -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init();
     </script>
-    <!-- Hubsot Contact Form   -->
-    <script
-      charset="utf-8"
-      type="text/javascript"
-      src="//js-eu1.hsforms.net/forms/embed/v2.js"
-    ></script>
-
-    <script>
-      hbspt.forms.create({
-        region: 'eu1',
-        portalId: '139691288',
-        formId: '3355dc76-496c-4f5d-aa84-5a348c6bb49f',
-        target: '#contact-form',
-      });
-    </script>
 
     <!-- Hubspot Chat-->
-
+    <!-- try -->
+    <script
+      id="hubspot-script"
+      charset="utf-8"
+      type="text/javascript"
+      data-src="//js-eu1.hsforms.net/forms/embed/v2.js"
+    ></script>
     <script
       type="module"
       defer
       src="https://js.hs-scripts.com/139691288.js"
     ></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

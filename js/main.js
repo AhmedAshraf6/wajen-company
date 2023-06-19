@@ -53,3 +53,39 @@ function blurring() {
 function scale(number, inMin, inMax, outMin, outMax) {
   return ((number - inMin) * (outMax - outMin)) / (inMax - inMin) + outMin;
 }
+
+// hubspot Form
+// Query DOM Elements
+const script = document.getElementById('hubspot-script');
+const footer = document.getElementById('ss');
+
+// Add load event listener to script
+script.addEventListener('load', function () {
+  // run when script is loaded
+
+  // Create hubspot form
+  hbspt.forms.create({
+    portalId: '139691288',
+    formId: '3355dc76-496c-4f5d-aa84-5a348c6bb49f',
+    target: '#contact-form', // The CSS ID of the div where the form will appear
+  });
+});
+
+// Create intersection observer
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    // check if entry (footer) is intersecting
+    if (entry.isIntersecting) {
+      // footer is in viewport
+
+      // add src attribute to script (this will load the external script)
+      script.src = script.dataset.src;
+
+      // disconnect observer because we don't need it anymore
+      observer.disconnect();
+    }
+  });
+});
+
+// Observe footer element
+observer.observe(footer);
