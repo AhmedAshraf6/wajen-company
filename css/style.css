@@ -35,13 +35,14 @@ textarea {
     opacity: 0 !important;
     display: block;
     transition: 1s all;
+    pointer-events: none;
   }
   .dropdown:hover .dropdown-menu {
     opacity: 1 !important;
     pointer-events: initial;
   }
 }
-.dropdown-menu {
+/* .dropdown-menu {
   position: relative;
 }
 .dropdown-menu::before {
@@ -58,7 +59,7 @@ textarea {
   .dropdown-menu::before {
     top: 28px;
   }
-}
+} */
 /* Dropdown */
 * {
   list-style: none;
@@ -127,7 +128,7 @@ body {
   background-size: 100% 100%;
   background-position: center center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   height: 84vh;
   position: relative;
   z-index: -1;

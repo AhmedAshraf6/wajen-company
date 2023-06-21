@@ -1,7 +1,0 @@
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/bootstrap.rtl.min.css" />
-
-    <!-- Custom Style -->
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/ar.css" />
