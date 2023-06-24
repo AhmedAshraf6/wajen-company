@@ -46,13 +46,9 @@ const hamburger_icon = hamburger.querySelector('.hamburgar-icon');
 const mobile_menu = document.querySelector('.mobile-menu');
 
 hamburger.addEventListener('click', () => {
-  hamburger_icon.src =
-    hamburger_icon.src.includes('hamburgar-open.png') ||
-    hamburger_icon.src.includes('hamburgar-open-white.png')
-      ? '../images/close.png'
-      : window.pageYOffset > 1
-      ? '../images/hamburgar-open.png'
-      : '../images/hamburgar-open-white.png';
+  hamburger_icon.src = hamburger_icon.src.includes('hamburgar-open.png')
+    ? '../images/close.png'
+    : '../images/hamburgar-open-white.png';
   mobile_menu.classList.toggle('is-open');
 });
 
@@ -66,9 +62,7 @@ window.addEventListener('scroll', () => {
   navsmall.classList.toggle('sticky', window.pageYOffset > 1);
   if (window.pageYOffset > 1) {
     global.src = '../images/contact/global.png';
-    hamburgarIcon.src = '../images/hamburgar-open.png';
   } else {
     global.src = '../images/contact/global-white.png';
-    hamburgarIcon.src = '../images/hamburgar-open-white.png';
   }
 });
