@@ -48,7 +48,7 @@ const mobile_menu = document.querySelector('.mobile-menu');
 hamburger.addEventListener('click', () => {
   hamburger_icon.src = hamburger_icon.src.includes('hamburgar-open.png')
     ? '../images/close.png'
-    : '../images/hamburgar-open-white.png';
+    : '../images/hamburgar-open.png';
   mobile_menu.classList.toggle('is-open');
 });
 
