@@ -1,25 +1,3 @@
-const tabBtns = document.querySelector('.tab-btns');
-
-tabBtns.addEventListener('click', (e) => {
-  Array.from(tabBtns.children).forEach((btn) => {
-    btn.classList.remove('active-btn');
-  });
-  let activeTab = e.target.getAttribute('data-tab-btn');
-  let tabContent = document.querySelectorAll('.tab-content');
-  if (activeTab) {
-    e.target.closest('.tab').classList.add('active-btn');
-
-    Array.from(tabContent).forEach((content) => {
-      const activeContent = content.getAttribute('data-tab-content');
-      if (activeContent === activeTab) {
-        content.classList.add('active');
-      } else {
-        content.classList.remove('active');
-      }
-    });
-  }
-});
-
 // scroll Functionality
 const scroll = document.querySelector('.scrollTop');
 window.addEventListener('scroll', function () {
@@ -35,6 +13,9 @@ scroll.addEventListener('click', () => {
 // Blur Loading
 const loadText = document.querySelector('.loading-text');
 const bg = document.querySelector('.hero-section');
+var nav = document.querySelector('.nav-big');
+
+let navsmall = document.querySelector('.nav-small');
 var htmlElement = document.getElementsByTagName('html')[0];
 
 let load = 0;
@@ -45,6 +26,8 @@ function blurring() {
     clearInterval(int);
 
     htmlElement.style.overflowY = 'scroll';
+    nav.style.opacity = '1';
+    navsmall.style.opacity = '1';
   }
   loadText.innerHTML = `${load}%`;
   loadText.style.opacity = scale(load, 0, 100, 1, 0);
@@ -56,3 +39,36 @@ function scale(number, inMin, inMax, outMin, outMax) {
 
 // hubspot Form
 // Query DOM Elements
+
+// Navbar
+const hamburger = document.querySelector('.hamburger');
+const hamburger_icon = hamburger.querySelector('.hamburgar-icon');
+const mobile_menu = document.querySelector('.mobile-menu');
+
+hamburger.addEventListener('click', () => {
+  hamburger_icon.src =
+    hamburger_icon.src.includes('hamburgar-open.png') ||
+    hamburger_icon.src.includes('hamburgar-open-white.png')
+      ? '../images/close.png'
+      : window.pageYOffset > 1
+      ? '../images/hamburgar-open.png'
+      : '../images/hamburgar-open-white.png';
+  mobile_menu.classList.toggle('is-open');
+});
+
+// Navbar Sticky
+window.addEventListener('scroll', () => {
+  var nav = document.querySelector('.nav-big');
+  let navsmall = document.querySelector('.nav-small');
+  let global = document.querySelector('.global-icon');
+  let hamburgarIcon = document.querySelector('.hamburgar-icon');
+  nav.classList.toggle('sticky', window.pageYOffset > 1);
+  navsmall.classList.toggle('sticky', window.pageYOffset > 1);
+  if (window.pageYOffset > 1) {
+    global.src = '../images/contact/global.png';
+    hamburgarIcon.src = '../images/hamburgar-open.png';
+  } else {
+    global.src = '../images/contact/global-white.png';
+    hamburgarIcon.src = '../images/hamburgar-open-white.png';
+  }
+});

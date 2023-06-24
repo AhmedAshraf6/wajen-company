@@ -58,19 +58,19 @@
     <link rel="stylesheet" href="css/ar.css" />
 
     <!-- Font Google -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;600&display=swap"
       rel="stylesheet"
-    />
+    /> -->
 
     <!-- Scroll Animation -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
     <!-- Top Navbar -->
-    <nav class="bg-light text-primary py-3">
+    <!-- <nav class="bg-light text-primary py-3">
       <div class="container">
         <div
           class="d-flex justify-content-between align-items-center flex-wrap gap-2"
@@ -122,10 +122,17 @@
           </div>
         </div>
       </div>
-    </nav>
+    </nav> -->
     <!-- Top Navbar -->
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg py-4">
+
+    <!-- <hr class="hr mt-0 mb-0" /> -->
+    <!-- Navbar -->
+
+    <!-- New Navbar -->
+    <nav
+      class="navbar nav-big navbar-expand-lg fixed-top py-4 d-none d-lg-block"
+    >
       <div class="container">
         <a class="navbar-brand m-0" href="index.html">
           <img src="./images/logo-wajen-sa.png" alt="Logo-wajen-sa" />
@@ -193,19 +200,71 @@
               <a class="nav-link" href="#contact">اتصل بنا</a>
             </li>
           </ul>
-          <a href="en.html" class="d-none d-lg-flex align-items-center gap-1">
+          <a
+            href="en.html"
+            class="d-none d-lg-flex align-items-center gap-1 text-light"
+          >
             <img
-              src="./images/contact/global.png"
+              src="./images/contact/global-white.png"
               alt="global"
               loading="lazy"
+              style="width: 24px; height: 24px"
+              class="global-icon"
             />
-            <span class="text-secondary fw-semibold">English</span>
+            <span class="text-white fw-semibold lang-text">English</span>
           </a>
         </div>
       </div>
     </nav>
-    <hr class="hr mt-0 mb-0" />
-    <!-- Navbar -->
+    <!-- mobile menu -->
+    <div class="nav-small d-block d-lg-none fixed-top">
+      <nav class="small-nav d-flex d-lg-none">
+        <img src="./images/logo-wajen-sa.png" alt="Logo-wajen-sa" />
+
+        <button class="hamburger">
+          <span class="material-icons">
+            <img
+              src="./images/hamburgar-open-white.png"
+              class="hamburgar-icon"
+            />
+          </span>
+        </button>
+      </nav>
+
+      <div class="mobile-menu">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Discord</a>
+        <li class="nav-item dropdown mx-2 mx-sm-5">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            قطاع الاعمال
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <div class="dropdown-item py-2">
+                <h6 class="fw-bold">Wajen Menu</h6>
+                <p>The best application to manage your product list</p>
+              </div>
+            </li>
+            <li>
+              <div class="dropdown-item py-2">
+                <h6 class="fw-bold">Wajen Menu</h6>
+                <p>The best application to manage your product list</p>
+              </div>
+            </li>
+          </ul>
+        </li>
+      </div>
+    </div>
+
+    <!-- New Navbar -->
+
     <!-- Hero -->
     <div class="hero-section">
       <div class="overlay"></div>
@@ -219,14 +278,14 @@
     <!-- About Us -->
     <section class="about mt-4 mt-sm-5" id="about">
       <div class="container">
-        <h3
-          class="text-center fw-bold cssanimation"
+        <h4
+          class="text-center fw-bold box mx-auto w-100"
           data-aos="fade-down"
           data-aos-easing="linear"
           data-aos-duration="1500"
         >
           عن شركة وجين
-        </h3>
+        </h4>
         <div
           class="mt-2 mt-sm-4 d-flex gap-3 justify-content-center align-items-center"
         >
@@ -323,279 +382,212 @@
           الأعمال الحكومية ، تطوير الأعمال التجاريه ،تصميم المتاجر الإلكترونية
           ،تصميم مواقع للأفراد
         </p>
-        <div class="row align-items-center flex-column-reverse flex-lg-row">
-          <!-- images -->
-          <div class="col-12 col-lg-6">
-            <div class="images">
-              <div class="tab-content active h-100" data-tab-content="1">
-                <img
-                  src="./images/services/img1.webp"
-                  alt="analysis-projects-wajen-sa"
-                  class="rounded-3 w-100 h-100"
-                  loading="lazy"
-                />
+        <div class="row align-items-center g-3">
+          <div
+            class="col-sm-6 col-lg-4"
+            data-aos="zoom-in"
+            data-aos-easing="ease-in-sine"
+            data-aos-duration="500"
+          >
+            <article class="card">
+              <img
+                class="card__background"
+                src="./images/services/img1.webp"
+                alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
+              />
+              <div class="card__content | flow">
+                <div class="card__content--container | flow">
+                  <h4 class="card__title">تحليل المشاريع</h4>
+                  <p class="card__description">
+                    مرخص من البنك المركزي لتقديم الخدمات التقنية
+                  </p>
+                </div>
+                <button class="card__button">
+                  <img src="./images/services/develop-apps-wajen-sa.png" />
+                </button>
               </div>
-              <div class="tab-content h-100" data-tab-content="2">
-                <img
-                  src="./images/services/img2.webp"
-                  alt="develop-apps-wajen-sa"
-                  class="rounded-3 w-100 h-100"
-                  loading="lazy"
-                />
-              </div>
-              <div class="tab-content h-100" data-tab-content="3">
-                <img
-                  src="./images/services/img3.webp"
-                  alt="develop-sites-wajen-sa"
-                  class="rounded-3 w-100 h-100"
-                  loading="lazy"
-                />
-              </div>
-              <div class="tab-content h-100" data-tab-content="4">
-                <img
-                  src="./images/services/img4.webp"
-                  alt="design-projects-wajen-sa"
-                  class="rounded-3 w-100 h-100"
-                  loading="lazy"
-                />
-              </div>
-            </div>
+            </article>
           </div>
-          <!-- images -->
-
-          <!-- tabs -->
-          <div class="col-12 col-lg-6">
-            <div class="row tab-btns ms-4 ms-lg-0">
-              <!-- tab1 -->
-              <div
-                class="col-12 col-md-6 col-lg-12 tab active-btn d-flex align-items-center gap-2 pointer pb-3"
-                data-tab-btn="1"
-                data-aos="fade-right"
-                data-aos-easing="ease-in-sine"
-                data-aos-duration="1000"
-              >
-                <div
-                  class="tab-image rounded-2 flex justify-content-center align-items-center py-3 px-2"
-                  data-tab-btn="1"
-                >
-                  <img
-                    src="./images/services/analysis-projects-wajen-sa.png"
-                    alt="analysis-projects-wajen-sa"
-                    data-tab-btn="1"
-                    loading="lazy"
-                  />
-                </div>
-                <div class="d-flex flex-column gap-0 gap-sm-2" data-tab-btn="1">
-                  <h5 class="fw-semibold m-0 p-0" data-tab-btn="1">
-                    تحليل المشاريع
-                  </h5>
-                  <p class="m-0 p-0" data-tab-btn="1">
+          <div
+            class="col-sm-6 col-lg-4"
+            data-aos="zoom-in"
+            data-aos-easing="ease-in-sine"
+            data-aos-duration="1500"
+          >
+            <article class="card">
+              <img
+                class="card__background"
+                src="./images/services/img2.webp"
+                alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
+                width="1920"
+                height="2193"
+              />
+              <div class="card__content | flow">
+                <div class="card__content--container | flow">
+                  <h4 class="card__title">تطوير التطبيقات</h4>
+                  <p class="card__description">
                     مرخص من البنك المركزي لتقديم الخدمات التقنية
                   </p>
                 </div>
               </div>
-
-              <!-- tab1 -->
-              <!-- tab2 -->
-              <div
-                class="col-12 col-md-6 col-lg-12 tab d-flex align-items-center gap-2 pointer pb-3"
-                data-tab-btn="2"
-                data-aos="fade-right"
-                data-aos-easing="ease-in-sine"
-                data-aos-duration="1000"
-                data-aos-delay="50"
-              >
-                <div
-                  class="tab-image rounded-2 flex justify-content-center align-items-center py-3 px-2"
-                  data-tab-btn="2"
-                >
-                  <img
-                    src="./images/services/develop-apps-wajen-sa.png"
-                    alt="develop-apps-wajen-sa"
-                    data-tab-btn="2"
-                    loading="lazy"
-                  />
-                </div>
-                <div class="d-flex flex-column gap-0 gap-sm-2" data-tab-btn="2">
-                  <h5 class="fw-semibold m-0 p-0" data-tab-btn="2">
-                    تطوير التطبيقات
-                  </h5>
-                  <p class="m-0 p-0" data-tab-btn="2">
+            </article>
+          </div>
+          <div
+            class="col-sm-6 col-lg-4"
+            data-aos="zoom-in"
+            data-aos-easing="ease-in-sine"
+            data-aos-duration="2000"
+          >
+            <article class="card">
+              <img
+                class="card__background"
+                src="./images/services/img3.webp"
+                alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
+                width="1920"
+                height="2193"
+              />
+              <div class="card__content | flow">
+                <div class="card__content--container | flow">
+                  <h4 class="card__title">تطوير المواقع</h4>
+                  <p class="card__description">
                     مرخص من البنك المركزي لتقديم الخدمات التقنية
                   </p>
                 </div>
               </div>
-              <!-- tab2 -->
-              <!-- tab3 -->
-              <div
-                class="col-12 col-md-6 col-lg-12 tab d-flex align-items-center gap-2 pointer pb-3"
-                data-tab-btn="3"
-                data-aos="fade-right"
-                data-aos-easing="ease-in-sine"
-                data-aos-duration="1000"
-                data-aos-delay="100"
-              >
-                <div
-                  class="tab-image rounded-2 flex justify-content-center align-items-center py-3 px-2"
-                  data-tab-btn="3"
-                >
-                  <img
-                    src="./images/services/develop-sites-wajen-sa.png"
-                    alt="develop-sites-wajen-sa"
-                    data-tab-btn="3"
-                    loading="lazy"
-                  />
-                </div>
-                <div class="d-flex flex-column gap-0 gap-sm-2" data-tab-btn="3">
-                  <h5 class="fw-semibold m-0 p-0" data-tab-btn="3">
-                    تطوير المواقع
-                  </h5>
-                  <p class="m-0 p-0" data-tab-btn="3">
+            </article>
+          </div>
+          <div
+            class="col-sm-6 col-lg-4"
+            data-aos="zoom-in"
+            data-aos-easing="ease-in-sine"
+            data-aos-duration="1000"
+          >
+            <article class="card">
+              <img
+                class="card__background"
+                src="./images/services/img4.webp"
+                alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
+                width="1920"
+                height="2193"
+              />
+              <div class="card__content | flow">
+                <div class="card__content--container | flow">
+                  <h4 class="card__title">تصميم المشاريع</h4>
+                  <p class="card__description">
                     مرخص من البنك المركزي لتقديم الخدمات التقنية
                   </p>
                 </div>
               </div>
-
-              <!-- tab3 -->
-              <!-- tab4 -->
-              <div
-                class="col-12 col-md-6 col-lg-12 tab d-flex align-items-center gap-2 pointer"
-                data-tab-btn="4"
-                data-aos="fade-right"
-                data-aos-easing="ease-in-sine"
-                data-aos-duration="1000"
-                data-aos-delay="200"
-              >
-                <div
-                  class="tab-image rounded-2 flex justify-content-center align-items-center py-3 px-3"
-                  data-tab-btn="4"
-                >
-                  <img
-                    src="./images/services/design-projects-wajen-sa.png"
-                    alt="design-projects-wajen-sa"
-                    data-tab-btn="4"
-                    loading="lazy"
-                  />
-                </div>
-                <div class="d-flex flex-column gap-0 gap-sm-2" data-tab-btn="4">
-                  <h5 class="fw-semibold m-0 p-0" data-tab-btn="4">
-                    تصميم المشاريع
-                  </h5>
-                  <p class="m-0 p-0" data-tab-btn="4">
-                    مرخص من البنك المركزي لتقديم الخدمات التقنية
-                  </p>
-                </div>
-              </div>
-              <!-- tab4 -->
-            </div>
-            <!-- tabs -->
+            </article>
           </div>
         </div>
       </div>
     </section>
     <!-- Services -->
 
-    <!-- Channel Contact -->
-    <section class="contact" id="contact">
-      <div class="container">
-        <div class="text-center">
-          <h3 class="fw-bold text-center fw-bold cssanimation">
-            قنوات التواصل
-          </h3>
-          <p class="fs-4">هناك العديد من القنوات التي تفضلها</p>
-        </div>
-        <div class="contact-sec my-4 shadow py-3 py-md-0 px-3 px-lg-4">
-          <div class="row align-items-center">
-            <!-- info -->
-            <div class="col-12 col-md-6">
-              <div class="d-flex flex-column gap-4 w-100">
-                <!-- first method -->
-                <div
-                  class="d-flex gap-3 align-items-start"
-                  data-aos="fade-up"
-                  data-aos-anchor-placement="top-bottom"
-                  data-aos-duration="1000"
-                  data-aos-delay="300"
-                >
+    <div class="position-relative contactandgoogle w-100">
+      <!-- Channel Contact -->
+      <section class="contact" id="contact">
+        <div class="container">
+          <div class="text-center">
+            <h3 class="fw-bold text-center fw-bold cssanimation">
+              قنوات التواصل
+            </h3>
+            <p class="fs-4">هناك العديد من القنوات التي تفضلها</p>
+          </div>
+          <div
+            class="contact-sec my-4 shadow py-3 py-md-0 px-3 px-lg-4 bg-white"
+          >
+            <div class="row align-items-center">
+              <!-- info -->
+              <div class="col-12 col-md-6">
+                <div class="d-flex flex-column gap-4 w-100">
+                  <!-- first method -->
                   <div
-                    class="d-flex justify-content-center align-items-center rounded-circle border border-primary p-2"
+                    class="d-flex gap-3 align-items-start"
+                    data-aos="fade-up"
+                    data-aos-anchor-placement="top-bottom"
+                    data-aos-duration="1000"
+                    data-aos-delay="300"
                   >
-                    <img
-                      src="./images/contact/location.png"
-                      alt="location-wajen-sa"
-                    />
+                    <div
+                      class="d-flex justify-content-center align-items-center rounded-circle border border-primary p-2"
+                    >
+                      <img
+                        src="./images/contact/location.png"
+                        alt="location-wajen-sa"
+                      />
+                    </div>
+                    <div
+                      class="info d-flex flex-column text-secondary border-bottom border-primary"
+                    >
+                      <h5 class="fw-semibold">موقعنا</h5>
+                      <p class="mb-2">
+                        طريق الأمير سلطان، الفيصلية الجنوبية، تبوك 47911
+                      </p>
+                    </div>
                   </div>
+                  <!-- Second method -->
                   <div
-                    class="info d-flex flex-column text-secondary border-bottom border-primary"
+                    class="d-flex gap-3 align-items-start"
+                    data-aos="fade-up"
+                    data-aos-anchor-placement="center-bottom"
+                    data-aos-duration="1000"
+                    data-aos-delay="400"
                   >
-                    <h5 class="fw-semibold">موقعنا</h5>
-                    <p class="mb-2">
-                      طريق الأمير سلطان، الفيصلية الجنوبية، تبوك 47911
-                    </p>
+                    <div
+                      class="d-flex justify-content-center align-items-center rounded-circle border border-primary p-2"
+                    >
+                      <img
+                        src="./images/contact/phone-contact.png"
+                        alt="location-wajen-sa"
+                      />
+                    </div>
+                    <div
+                      class="info d-flex flex-column text-secondary border-bottom border-primary"
+                    >
+                      <h5 class="fw-semibold">هاتف التواصل</h5>
+                      <p class="mb-2">+966506963328</p>
+                    </div>
                   </div>
-                </div>
-                <!-- Second method -->
-                <div
-                  class="d-flex gap-3 align-items-start"
-                  data-aos="fade-up"
-                  data-aos-anchor-placement="center-bottom"
-                  data-aos-duration="1000"
-                  data-aos-delay="400"
-                >
+                  <!-- Third method -->
                   <div
-                    class="d-flex justify-content-center align-items-center rounded-circle border border-primary p-2"
+                    class="d-flex gap-3 align-items-start"
+                    data-aos="fade-up"
+                    data-aos-anchor-placement="center-bottom"
+                    data-aos-duration="1000"
+                    data-aos-delay="500"
                   >
-                    <img
-                      src="./images/contact/phone-contact.png"
-                      alt="location-wajen-sa"
-                    />
-                  </div>
-                  <div
-                    class="info d-flex flex-column text-secondary border-bottom border-primary"
-                  >
-                    <h5 class="fw-semibold">هاتف التواصل</h5>
-                    <p class="mb-2">+966506963328</p>
-                  </div>
-                </div>
-                <!-- Third method -->
-                <div
-                  class="d-flex gap-3 align-items-start"
-                  data-aos="fade-up"
-                  data-aos-anchor-placement="center-bottom"
-                  data-aos-duration="1000"
-                  data-aos-delay="500"
-                >
-                  <div
-                    class="d-flex justify-content-center align-items-center rounded-circle border border-primary p-2"
-                  >
-                    <img
-                      src="./images/contact/email-contact.png"
-                      alt="location-wajen-sa"
-                    />
-                  </div>
-                  <div
-                    class="info d-flex flex-column text-secondary border-bottom border-primary"
-                  >
-                    <h5 class="fw-semibold">ايميل</h5>
-                    <p class="mb-2">wajen@wajen.sa</p>
+                    <div
+                      class="d-flex justify-content-center align-items-center rounded-circle border border-primary p-2"
+                    >
+                      <img
+                        src="./images/contact/email-contact.png"
+                        alt="location-wajen-sa"
+                      />
+                    </div>
+                    <div
+                      class="info d-flex flex-column text-secondary border-bottom border-primary"
+                    >
+                      <h5 class="fw-semibold">ايميل</h5>
+                      <p class="mb-2">wajen@wajen.sa</p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="col-12 col-md-6">
-              <!-- arabic edit -->
-              <div id="contact-form" class="contact-form py-3"></div>
+              <div class="col-12 col-md-6">
+                <!-- arabic edit -->
+                <div id="contact-form" class="contact-form py-3"></div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <!-- Channel Contact -->
+      </section>
+      <!-- Channel Contact -->
 
-    <!-- Google Maps -->
-    <div class="google-maps mt-5">
-      <div class="container">
-        <div className="d-flex justify-center mt-10">
+      <!-- Google Maps -->
+      <div class="google-maps w-100">
+        <div className="d-flex justify-center ">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3510.0618505378416!2d36.581756!3d28.387199799999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15a9adcd63e1b7f7%3A0x42da15fa861474e2!2z2YjYrNmK2YYg2YTYqtmC2YbZitipINin2YTZhdi52YTZiNmF2KfYqg!5e0!3m2!1sen!2ssa!4v1685893341298!5m2!1sen!2ssa"
             loading="lazy"
@@ -605,8 +597,8 @@
           ></iframe>
         </div>
       </div>
+      <!-- Google Maps -->
     </div>
-    <!-- Google Maps -->
     <!-- Footer -->
     <footer class="py-3">
       <div class="d-flex justify-content-center align-items-center gap-1">
@@ -651,7 +643,6 @@
       });
     </script>
     <!-- Hubspot Chat-->
-
     <script
       type="module"
       defer
