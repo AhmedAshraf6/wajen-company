@@ -209,6 +209,11 @@ body {
   transition: 1s all ease;
 }
 
+@media (max-width: 576px) {
+  .mobile-menu .dropdown-menu {
+    height: 200px;
+  }
+}
 .mobile-menu.is-open {
   opacity: 1;
   transform: translateY(0);
