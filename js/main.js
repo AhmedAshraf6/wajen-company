@@ -44,17 +44,18 @@ function scale(number, inMin, inMax, outMin, outMax) {
 const hamburger = document.querySelector('.hamburger');
 const hamburger_icon = hamburger.querySelector('.hamburgar-icon');
 const mobile_menu = document.querySelector('.mobile-menu');
+const mobile_menuLinks = document.querySelectorAll(
+  '.mobile-menu .mobile-menu-link'
+);
 
 hamburger.addEventListener('click', () => {
   if (
     hamburger_icon.src.includes('hamburgar-open.png') ||
     hamburger_icon.src.includes('hamburgar-open-white.png')
   ) {
-    console.log('yes');
     htmlElement.style.overflowY = 'hidden';
   } else {
     htmlElement.style.overflowY = 'scroll';
-    console.log('no');
   }
   hamburger_icon.src =
     hamburger_icon.src.includes('hamburgar-open.png') ||
@@ -64,18 +65,13 @@ hamburger.addEventListener('click', () => {
       ? '../images/hamburgar-open.png'
       : '../images/hamburgar-open-white.png';
   mobile_menu.classList.toggle('is-open');
-  if (
-    hamburger_icon.src.includes('hamburgar-open.png') ||
-    hamburger_icon.src.includes('hamburgar-open-white.png')
-  ) {
-    htmlElement.style.overflowY = 'scroll';
-    console.log('yes');
-  } else {
-    htmlElement.style.overflowY = 'hidden';
-    console.log('no');
-  }
 });
-
+mobile_menuLinks.forEach((a) => {
+  a.addEventListener('click', () => {
+    mobile_menu.classList.remove('is-open');
+    htmlElement.style.overflowY = 'scroll';
+  });
+});
 // Navbar Sticky
 window.addEventListener('scroll', () => {
   var nav = document.querySelector('.nav-big');
