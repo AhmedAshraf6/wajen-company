@@ -46,6 +46,16 @@ const hamburger_icon = hamburger.querySelector('.hamburgar-icon');
 const mobile_menu = document.querySelector('.mobile-menu');
 
 hamburger.addEventListener('click', () => {
+  if (
+    hamburger_icon.src.includes('hamburgar-open.png') ||
+    hamburger_icon.src.includes('hamburgar-open-white.png')
+  ) {
+    console.log('yes');
+    htmlElement.style.overflowY = 'hidden';
+  } else {
+    htmlElement.style.overflowY = 'scroll';
+    console.log('no');
+  }
   hamburger_icon.src =
     hamburger_icon.src.includes('hamburgar-open.png') ||
     hamburger_icon.src.includes('hamburgar-open-white.png')
@@ -54,6 +64,16 @@ hamburger.addEventListener('click', () => {
       ? '../images/hamburgar-open.png'
       : '../images/hamburgar-open-white.png';
   mobile_menu.classList.toggle('is-open');
+  if (
+    hamburger_icon.src.includes('hamburgar-open.png') ||
+    hamburger_icon.src.includes('hamburgar-open-white.png')
+  ) {
+    htmlElement.style.overflowY = 'scroll';
+    console.log('yes');
+  } else {
+    htmlElement.style.overflowY = 'hidden';
+    console.log('no');
+  }
 });
 
 // Navbar Sticky

@@ -164,6 +164,7 @@ body {
   display: none;
   align-items: center;
   margin: 0 -1rem;
+  overflow-y: hidden;
 }
 
 .menu a {
